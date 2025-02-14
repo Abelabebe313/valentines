@@ -12,7 +12,7 @@ interface Coordinates {
 export default function Home() {
   const [image, setImage] = useState(false);
   const [coord, setCoords] = useState<Coordinates | null>(null);
-  const [response, setResponse] = useState('No');
+  const [response, setResponse] = useState('እምቢ! 🤨');
 
   const handleNoBtn = () => {
     const x = Math.random() * 60;
@@ -21,12 +21,13 @@ export default function Home() {
     setCoords({ x: `${x}%`, y: `${y}%` });
 
     const phrases = [
-      "Wrong button ❌",
-      "Are you sure 🤔?",
-      "But what if 🫣?",
-      "You're breaking my heart 💔",
-      "Pwetty please 🥺👉👈",
-      "Can't catch up? 😂"
+      "የተሳሳተ ምርጫ ❌",
+      "ምርጫሽን አስተካክይ ❌",
+      "እርግጠኛ ነሽ 🤔?",
+      "ተይ ግድ የለሽም እሽ በይኝ!!! 🫣",
+      "እያናደድሽኝ ነው! ስርዓት! 💔",
+      "ኧረ እባክሽን ናኒዬ 🥺👉👈",
+      "በይ ሞክሪው ምን ይደረጋል! 😂"
     ]
 
     const randomIndex = Math.floor(Math.random() * phrases.length);
@@ -41,7 +42,7 @@ export default function Home() {
     <div className="container">
       <section>
         <div>
-          <p>♡ Will you be my Valentine? ♡</p>
+          <p>♡ Naniye Will you be my Valentine? ♡</p>
         </div>
         <div className="img-container">
           {image ? (
@@ -57,7 +58,7 @@ export default function Home() {
               className="yes-button button-base button-green"
               onMouseOver={handleYesBtn} onMouseOut={handleYesBtn}
             >
-              Yes
+             እሽ! 🥰
             </button>
           </Link>
           <button className='no-button button-base button-red' style={coord ? { position: 'absolute', top: coord.x, right: coord.y } : undefined}
